@@ -10,15 +10,19 @@
 </head>
 <body>
 	<div class="container">
-		<h1>TODO Application</h1>
-		<ul class="navigation">
-			<li><a href="all">All</a></li>
-			<li><a href="pending">Pending</a></li>
-			<li><a href="completed">done</a></li>
-		</ul>
-		<h2>List of ToDo's</h2>
-		<ul class="list-todo">
-			<li>TO DO Whatever</li>
+		<div id="myDIV" class="header">
+  			<h2>My To Do List</h2>
+  			<input type="text" id="myInput" placeholder="Title...">
+  			<span onclick="newElement()" class="addBtn">Add</span>
+		</div>
+
+		<ul id="myUL">
+  			<li>Hit the gym</li>
+  			<li class="checked">Pay bills</li>
+  			<li>Meet George</li>
+  			<li>Buy eggs</li>
+  			<li>Read a book</li>
+  			<li>Organize office</li>
 		</ul>
 	</div>
 </body>
