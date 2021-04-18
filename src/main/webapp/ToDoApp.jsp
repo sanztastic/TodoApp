@@ -12,17 +12,16 @@
 	<div class="container">
 		<div id="myDIV" class="header">
   			<h2>My To Do List</h2>
-  			<input type="text" id="myInput" placeholder="Title...">
-  			<span onclick="newElement()" class="addBtn">Add</span>
+  			<form action="/add" method="post">
+  				<input type="text" id="myInput" placeholder="Title...">
+  				<input type="submit" class="addBtn" value="Submit">
+  			</form>
 		</div>
 
 		<ul id="myUL">
-  			<li>Hit the gym</li>
-  			<li class="checked">Pay bills</li>
-  			<li>Meet George</li>
-  			<li>Buy eggs</li>
-  			<li>Read a book</li>
-  			<li>Organize office</li>
+			<c:forEach items="${ todo_list }" var="item">
+				<li>${ item }</li>
+			</c:forEach>
 		</ul>
 	</div>
 </body>
